@@ -10,7 +10,6 @@ import UIKit
 
 class TutorialView: UIView {
     private let configuration: TutorialConfiguration
-    private var application = UIApplication.shared
     private lazy var blurView: UIVisualEffectView = {
         UIVisualEffectView(effect: configuration.blurEffect)
     }()
@@ -102,7 +101,7 @@ class TutorialView: UIView {
             titleLabel.text = page.title
             descriptionLabel.text = page.description
             contentWrapperView.layoutIfNeeded()
-            let views = page.items.compactMap { $0.view ?? application.windows.first?.viewWithTag($0.tag) }
+            let views = page.items.compactMap { $0.view ?? window?.viewWithTag($0.tag) }
             createMask(for: views)
             updateContentWrapperViewPosition(for: views)
         }
@@ -131,7 +130,7 @@ class TutorialView: UIView {
     }
 
     private func updateContentWrapperViewPosition(for views: [UIView]) {
-        let height = application.windows.first?.bounds.size.height ?? 0
+        let height = window?.bounds.size.height ?? 0
         var offsets = [0, height]
         views.forEach { view in
             let rect = rect(for: view)
