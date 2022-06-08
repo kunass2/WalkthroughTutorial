@@ -1,8 +1,9 @@
-<img src="Assets/icon.png" width="200"><br />
-
 # WalkthroughTutorial
 
-![Reordering animation](Assets/example.gif)
+<img src="Assets/1.png" width="200">
+<img src="Assets/2.png" width="200">
+<img src="Assets/3.png" width="200">
+<img src="Assets/4.png" width="200">
 
 ## Installation
 
