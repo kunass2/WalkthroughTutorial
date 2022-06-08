@@ -67,21 +67,21 @@ class ViewController: UIViewController {
                     TutorialItem(view: greenView),
                 ],
                 title: "First Initial page",
-                description: "- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n"
+                description: "- lorem ipsum first"
             ),
             TutorialPage(
                 items: [
                     TutorialItem(view: brownView),
                 ],
                 title: "Second Initial page",
-                description: "- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n"
+                description: "- lorem ipsum second"
             ),
             TutorialPage(
                 items: [
                     TutorialItem(view: purpleView),
                 ],
                 title: "Third Initial page",
-                description: "- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n- lorem ipsum dolor sit amet\n\n"
+                description: "- lorem ipsum third"
             ),
         ]
         var blurEffect = UIBlurEffect(style: .dark)
