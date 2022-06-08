@@ -1,0 +1,6 @@
+framework module WalkthroughTutorial {
+  umbrella header "WalkthroughTutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}
