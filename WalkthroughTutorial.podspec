@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
   s.summary          = 'Easily show your customers how to use your app.'
   s.description      = "Looking for simple Swift library to present walkthrough? This one is for you:)"
   s.swift_version    = '5.0'
-  s.homepage         = 'https://github.com/kunass2/MaskedTextField'
+  s.homepage         = 'https://github.com/kunass2/WalkthroughTutorial'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kunass2' => 'bartekss2@icloud.com' }
-  s.source           = { :git => 'https://github.com/kunass2/MaskedTextField.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/kunass2/WalkthroughTutorial.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
