@@ -134,8 +134,11 @@ class TutorialView: UIView {
         var offsets = [0, height]
         views.forEach { view in
             let rect = rect(for: view)
-            offsets.append(rect.origin.y)
-            offsets.append(rect.origin.y + rect.size.height)
+            let topY = rect.origin.y
+            if topY < height, height > 0 {
+                offsets.append(topY)
+                offsets.append(rect.origin.y + rect.size.height)
+            }
         }
         offsets = offsets.sorted { $0 < $1 }
         var calculatedOffset = CGFloat(0)
