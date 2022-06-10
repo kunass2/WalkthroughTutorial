@@ -35,15 +35,22 @@ class TutorialView: UIView {
     lazy var skipButton: UIButton = {
         let button = UIButton()
         button.setTitle(configuration.skipButtonTitle, for: .normal)
-        button.setTitleColor(configuration.skipButtonColor, for: .normal)
-        button.titleLabel?.font = configuration.skipButtonFont
+        button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
+        button.titleLabel?.font = configuration.navigationButtonsFont
         return button
     }()
     lazy var nextButton: UIButton = {
         let button = UIButton()
         button.setTitle(configuration.nextButtonTitle, for: .normal)
-        button.setTitleColor(configuration.nextButtonColor, for: .normal)
-        button.titleLabel?.font = configuration.nextButtonFont
+        button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
+        button.titleLabel?.font = configuration.navigationButtonsFont
+        return button
+    }()
+    lazy var readyButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(configuration.readyButtonTitle, for: .normal)
+        button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
+        button.titleLabel?.font = configuration.navigationButtonsFont
         return button
     }()
     
@@ -82,6 +89,12 @@ class TutorialView: UIView {
             maker.bottom.equalTo(-20)
             maker.height.equalTo(30)
         }
+        contentWrapperView.addSubview(readyButton)
+        readyButton.snp.makeConstraints { maker in
+            maker.trailing.equalTo(-20)
+            maker.bottom.equalTo(-20)
+            maker.height.equalTo(30)
+        }
         contentWrapperView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview().inset(20)
@@ -106,6 +119,8 @@ class TutorialView: UIView {
             updateContentWrapperViewPosition(for: views)
         }
         nextButton.isHidden = isLastPage
+        readyButton.isHidden = !isLastPage
+        skipButton.isHidden = isLastPage
     }
 
     // MARK: - Private

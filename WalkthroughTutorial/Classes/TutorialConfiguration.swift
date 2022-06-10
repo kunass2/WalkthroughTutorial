@@ -6,11 +6,10 @@
 //
 public class TutorialConfiguration {
     public var skipButtonTitle = "Skip"
-    public var skipButtonColor = UIColor.white
-    public var skipButtonFont = UIFont.systemFont(ofSize: 14)
     public var nextButtonTitle = "Next"
-    public var nextButtonColor = UIColor.white
-    public var nextButtonFont = UIFont.systemFont(ofSize: 14)
+    public var readyButtonTitle = "Ready"
+    public var navigationButtonsColor = UIColor.white
+    public var navigationButtonsFont = UIFont.systemFont(ofSize: 14)
     public var titleColor = UIColor.white
     public var descriptionColor = UIColor.white
     public var titleFont = UIFont.boldSystemFont(ofSize: 32)

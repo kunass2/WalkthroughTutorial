@@ -51,6 +51,9 @@ public class TutorialViewController: UIViewController {
         mainView.nextButton.rx.tap.bind { [weak self] in
             self?.update()
         }.disposed(by: disposeBag)
+        mainView.readyButton.rx.tap.bind { [weak self] in
+            self?.dismiss(animated: true)
+        }.disposed(by: disposeBag)
     }
     
     private func update() {
