@@ -83,6 +83,16 @@ class ViewController: UIViewController {
                 title: "Third Initial page",
                 description: "- lorem ipsum third"
             ),
+            TutorialPage(
+                items: [
+                    TutorialItem(view: yellowView),
+                    TutorialItem(view: greenView),
+                    TutorialItem(view: brownView),
+                    TutorialItem(view: purpleView),
+                ],
+                title: "Fourth Initial page\nand spacing\nand spacing",
+                description: "- lorem ipsum fourth\nand spacing\nsnad spacing"
+            ),
         ]
         var blurEffect = UIBlurEffect(style: .dark)
         if #available(iOS 13.0, *) {

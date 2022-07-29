@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WalkthroughTutorial'
-  s.version          = '1.3'
+  s.version          = '1.4'
   s.summary          = 'Easily show your customers how to use your app.'
   s.description      = "Looking for simple Swift library to present walkthrough? This one is for you:)"
   s.swift_version    = '5.0'

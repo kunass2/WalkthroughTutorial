@@ -21,6 +21,8 @@ class TutorialView: UIView {
         label.font = configuration.titleFont
         label.textColor = configuration.titleColor
         label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
         return label
     }()
 
@@ -28,6 +30,7 @@ class TutorialView: UIView {
         let label = UILabel()
         label.font = configuration.descriptionFont
         label.textColor = configuration.descriptionColor
+        label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 0
         return label
     }()
@@ -96,6 +99,7 @@ class TutorialView: UIView {
             maker.height.equalTo(30)
         }
         contentWrapperView.addSubview(descriptionLabel)
+//        descriptionLabel.setContentCompressionResistancePriority(UILayoutPriority(999), for: .vertical)
         descriptionLabel.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview().inset(20)
             maker.bottom.equalTo(skipButton.snp.top).offset(-20)
@@ -146,6 +150,7 @@ class TutorialView: UIView {
 
     private func updateContentWrapperViewPosition(for views: [UIView]) {
         let height = window?.bounds.size.height ?? 0
+        let bottomInset = window?.safeAreaInsets.bottom ?? 0
         var offsets = [0, height]
         views.forEach { view in
             let rect = rect(for: view)
@@ -157,14 +162,31 @@ class TutorialView: UIView {
         }
         offsets = offsets.sorted { $0 < $1 }
         var calculatedOffset = CGFloat(0)
+        var highestDifference = CGFloat(0)
+        var highestOffset = CGFloat(0)
         _ = offsets.reduce(calculatedOffset) { previousOffset, currentOffset in
-            if currentOffset - previousOffset >= contentWrapperView.bounds.size.height {
+            let difference = currentOffset - previousOffset
+            if difference >= contentWrapperView.bounds.size.height {
                 calculatedOffset = currentOffset
+            }
+            if difference >= highestDifference {
+                highestDifference = difference
+                highestOffset = currentOffset
             }
             return currentOffset
         }
-        contentWrapperView.snp.updateConstraints { maker in
+        
+        if calculatedOffset == 0 {
+            calculatedOffset = highestOffset + bottomInset
+        } else if calculatedOffset < height {
+            calculatedOffset = calculatedOffset + bottomInset
+        }
+        contentWrapperView.snp.remakeConstraints { maker in
             maker.bottom.equalTo(safeAreaLayoutGuide).offset(calculatedOffset - height)
+            maker.leading.trailing.equalToSuperview()
+            if contentWrapperView.bounds.size.height > highestDifference {
+                maker.height.equalTo(highestDifference - 20)
+            }
         }
     }
 }
