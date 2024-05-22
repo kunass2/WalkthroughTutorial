@@ -379,10 +379,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = J8AS95NKP2;
 				INFOPLIST_FILE = WalkthroughTutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.blueworld.universal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Universal App Development";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -398,10 +398,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = J8AS95NKP2;
 				INFOPLIST_FILE = WalkthroughTutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.blueworld.universal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Universal App Development";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

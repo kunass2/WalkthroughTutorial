@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WalkthroughTutorial'
-  s.version          = '1.4'
+  s.version          = '1.5'
   s.summary          = 'Easily show your customers how to use your app.'
   s.description      = "Looking for simple Swift library to present walkthrough? This one is for you:)"
   s.swift_version    = '5.0'
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/kunass2/WalkthroughTutorial.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '15.0'
 
   s.source_files = 'WalkthroughTutorial/Classes/**/*'
   

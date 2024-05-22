@@ -6,7 +6,7 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SnapKit (4.2.0)
-  - WalkthroughTutorial (1.0):
+  - WalkthroughTutorial (1.4):
     - RxCocoa
     - RxSwift
     - SnapKit
@@ -30,8 +30,8 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  WalkthroughTutorial: 9c6b7f60c380acd114882f203865cb022ecc78aa
+  WalkthroughTutorial: 0af80435c4ce4b3ad426a7785708f72bd7e8eea6
 
-PODFILE CHECKSUM: eea477d324f9395fc1881b8fa549ce5b2f7af0ef
+PODFILE CHECKSUM: 00bc4653df490ab74d69cb4de837a9c0e31110bc
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.15.2
