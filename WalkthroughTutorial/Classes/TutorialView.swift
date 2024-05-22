@@ -18,7 +18,7 @@ class TutorialView: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFontMetrics.default.scaledFont(for: configuration.titleFont)
+        label.font = configuration.titleFont
         label.adjustsFontForContentSizeCategory = true
         label.textColor = configuration.titleColor
         label.numberOfLines = 0
@@ -29,7 +29,7 @@ class TutorialView: UIView {
 
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFontMetrics.default.scaledFont(for: configuration.descriptionFont)
+        label.font = configuration.descriptionFont
         label.adjustsFontForContentSizeCategory = true
         label.textColor = configuration.descriptionColor
         label.lineBreakMode = .byTruncatingTail
@@ -41,7 +41,7 @@ class TutorialView: UIView {
         let button = UIButton()
         button.setTitle(configuration.skipButtonTitle, for: .normal)
         button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
-        button.titleLabel?.font = UIFontMetrics.default.scaledFont(for: configuration.navigationButtonsFont)
+        button.titleLabel?.font = configuration.navigationButtonsFont
         button.titleLabel?.adjustsFontForContentSizeCategory = true
         return button
     }()
@@ -49,7 +49,7 @@ class TutorialView: UIView {
         let button = UIButton()
         button.setTitle(configuration.nextButtonTitle, for: .normal)
         button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
-        button.titleLabel?.font = UIFontMetrics.default.scaledFont(for: configuration.navigationButtonsFont)
+        button.titleLabel?.font = configuration.navigationButtonsFont
         button.titleLabel?.adjustsFontForContentSizeCategory = true
         return button
     }()
@@ -57,7 +57,7 @@ class TutorialView: UIView {
         let button = UIButton()
         button.setTitle(configuration.readyButtonTitle, for: .normal)
         button.setTitleColor(configuration.navigationButtonsColor, for: .normal)
-        button.titleLabel?.font = UIFontMetrics.default.scaledFont(for: configuration.navigationButtonsFont)
+        button.titleLabel?.font = configuration.navigationButtonsFont
         button.titleLabel?.adjustsFontForContentSizeCategory = true
         return button
     }()
